@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  width: 100%;
+  background: #e6f4fa;
+}
+
+.head-cont {
+  width: 100%;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: -ms-sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000000;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 4em;
+}
+
+.logo {
+  float: left;
+  width: 40vw;
+  margin: auto;
+  font-weight: 900;
+  font-size: large;
+  color: #0099ff;
+}
+
+.nav-bar {
+  float: right;
+  width: 50vw;
+  margin: auto;
+  z-index: 999;
+}
+
+.nav-bar .main-nav-bar > li {
+  float: left;
+  list-style: none;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  margin: auto 8px;
+  padding: 1.1em;
+}
+
+.nav-bar .main-nav-bar > li:last-of-type {
+  border: none;
+}
+
+.main-nav-bar li > a:hover {
+  border-bottom: 3px solid #0099ff;
+}
+
+.main-nav-bar li > a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 900;
+}
+
+.fas-fa-caret-down {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.dropbtn {
+  position: relative;
+}
+
+ul .dropdown-cont {
+  position: absolute;
+  margin-top: 1.12em;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 5px;
+  display: none;
+}
+
+ul .dropdown-cont > li {
+  list-style: none;
+}
+
+ul .dropdown-cont > li:hover a {
+  background-color: #333;
+  color: #fff;
+}
+
+ul .dropbtn li > a {
+  display: inline-block;
+  padding: 8px 10px;
+  width: 200px;
+}
+
+#btn {
+  background: none;
+  color: #333;
+  border: none;
+  font-size: inherit;
+  font-weight: 900;
+  outline: none;
+  cursor: pointer;
+  width: 90%;
+  margin-left: 20px;
+  /* height: 95%; */
+}
+
+#contact-us a {
+  border-bottom: 3px solid #0099ff;
+  pointer-events: none;
+}
+
+label {
+  display: none;
+}
+
+/* .dropbtn:hover .dropdown-cont {
+  display: block;
+  z-index: 9999;
+} */
+
+/*
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+*/
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 1060px) {
+  .nav-bar {
+    font-size: 0.9em;
+    width: 57vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .head-cont .menu-btn i {
+    display: block;
+    cursor: pointer;
+    margin-right: 1.1em;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+}
+
+@media (max-width: 900px) {
+  label {
+    display: block;
+    margin-right: 1.1em;
+  }
+
+  .menu-btn > i {
+    font-size: 1.5em;
+  }
+}
+
+/*
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+*/
+
+@media (max-width: 900px) {
+  .nav-bar {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    top: 4.41em;
+    background-color: #e6f4fa;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    text-align: left;
+  }
+  .logo {
+    text-align: center;
+  }
+
+  .main-nav-bar > li:first-of-type::before {
+    content: "\f015";
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 600;
+    padding-right: 0.7em;
+  }
+  .main-nav-bar > li:nth-of-type(2)::before {
+    content: "\f46d";
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 600;
+    padding-right: 0.7em;
+  }
+  .main-nav-bar > li:nth-of-type(3)::before {
+    content: "\f079";
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 600;
+    padding-right: 0.7em;
+  }
+  .main-nav-bar > li:nth-of-type(4)::before {
+    content: "\f658";
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 600;
+    padding-right: 0.7em;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main-nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    padding-top: 2em;
+    width: 100%;
+    background-color: #e6f4fa;
+    /* box-shadow: 4px 5px 500px 200px rgba(230, 240, 255, 1),
+      4px 5px 500px 200px rgba(230, 240, 255, 1); */
+
+    /* padding-left: 1.5em;
+    border-bottom: #fff;
+    border-radius: 15px; */
+  }
+
+  .main-nav-bar li:first-of-type {
+    border-radius: 11px 11px 0 0;
+  }
+
+  .main-nav-bar > li {
+    padding: 0;
+    text-align: left;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    width: 60%;
+    height: 80px;
+    margin: auto;
+    font-size: 1.3em;
+    background-color: #fff;
+    border: 1px solid transparent;
+  }
+
+  .main-nav-bar > li > a {
+    display: inline-block;
+    width: 80%;
+    height: 50px;
+    text-align: left;
+    border: 0;
+  }
+
+  #btn {
+    width: 70%;
+    height: 50px;
+    text-align: left;
+  }
+  #btn:hover {
+    opacity: 0.5;
+  }
+
+  .nav-bar .main-nav-bar li > a:hover {
+    border: none;
+    opacity: 0.5;
+  }
+  /* .main-nav-bar li {
+    opacity: 0;
+  } */
+
+  ul .dropdown-cont {
+    position: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    margin-left: -1.1em;
+  }
+}
+
+.dropbtn button:focus + ul {
+  display: block;
+  position: absolute;
+}
+
+.dropbtn button:focus ~ .nav-bar .main-nav-bar > li {
+  display: none;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.nav-acp {
+  box-shadow: 4px 5px 500px 5px rgba(230, 240, 255, 1),
+    4px 5px 500px 150px rgba(230, 240, 255, 1);
+}
+
+@media (max-width: 450px) {
+  .main-nav-bar > li {
+    width: 95%;
+  }
+
+  .main-nav-bar > li > a {
+    width: 50%;
+    /* text-align: left;
+    border: 0;
+    margin-left: 28px; */
+  }
+
+  #btn {
+    width: 50%;
+  }
+}
+
+@media (max-width: 370px) {
+  .main-nav-bar > li {
+    width: 100%;
+  }
+
+  .main-nav-bar > li > a {
+    width: 60%;
+  }
+
+  #btn {
+    width: 60%;
+  }
+}
+
+/*
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+*/
+
+.container {
+  max-width: 1050px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  margin: 0 auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6em 1.4em;
+}
+
+.content .image-box {
+  max-width: 55%;
+}
+
+.content .image-box img {
+  width: 100%;
+}
+
+.content .topic {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #0099ff;
+}
+
+.content form {
+  width: 40%;
+  margin-right: 1.9em;
+}
+
+.content .input-box {
+  height: 50px;
+  width: 100%;
+  margin: 16px 0;
+  position: relative;
+}
+
+.content .input-box input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  padding-left: 16px;
+  background: #e6f4fa;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.content .input-box input:focus,
+.content .input-box input:valid {
+  border-color: #0099ff;
+  background-color: #fff;
+}
+
+.content .input-box label {
+  display: block;
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  color: #636c72;
+  font-size: 15px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.content .input-box input:focus ~ label,
+.content .input-box input:valid ~ label {
+  top: 0;
+  left: 12px;
+  display: 14px;
+  color: #0099ff;
+  background: #fff;
+}
+
+.content .message-box {
+  min-height: 100px;
+  position: relative;
+}
+
+.content .message-box textarea {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  padding-left: 16px;
+  padding-top: 0.5em;
+  background: #e6f4fa;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.content .message-box textarea:focus {
+  border-color: #0099ff;
+  background-color: #fff;
+}
+
+.content .message-box label {
+  display: block;
+  position: absolute;
+  font-size: 16px;
+  color: #636c72;
+  left: 18px;
+  top: 6px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.content .message-box textarea:focus ~ label,
+.content .message-box textarea:valid ~ label {
+  left: 12px;
+  top: -10px;
+  color: #0099ff;
+  font-size: 14px;
+  background: #fff;
+}
+
+.content .input-box input[type="submit"] {
+  padding-left: 0;
+  color: #fff;
+  background: #0099ff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.content .input-box input[type="submit"]:hover {
+  background-color: #e6f4fa;
+  color: #333;
+  font-weight: bold;
+}
+
+@media (max-width: 100px) {
+  .content .image-box {
+    max-width: 70%;
+  }
+  .content {
+    padding: 10px 0;
+  }
+}
+@media (max-width: 900px) {
+  .content .image-box {
+    display: none;
+  }
+  .content form {
+    width: 100%;
+    margin-left: 30px;
+  }
+}
